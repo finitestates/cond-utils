@@ -28,8 +28,8 @@
     
     ;; w/ some primitive type-checking because I think that remainder is supposed to be an integer
     
-    (defun eulab-proper (d1 d2 &aux (a 0))
-  (labels
+   (defun eulab-proper (d1 d2 &aux (a 0))
+   (labels
       ((eudiv-aux (d1 d2 a)
 	 (cond
 	    ((null (integerp d1)) (format nil "d1 is not an integer"))
