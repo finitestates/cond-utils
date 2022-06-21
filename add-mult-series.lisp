@@ -23,3 +23,17 @@
 	     init
 	     (mult-aux2 (cdr seq) (* (car seq) init)))))
     (mult-aux1 seq init)))
+
+;; alternative iterative versions
+
+(defun add-list-iter (seq &optional (init 0))
+  (loop
+    (when (null seq) (return init))
+    (setq init (+ init (car seq)))
+    (pop seq)))
+
+(defun multi-list-iter (seq &optional (init 1))
+  (loop
+    (when (null seq) (return init))
+    (setq init (* init (car seq)))
+    (pop seq)))
